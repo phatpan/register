@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="APP">
+<head>
+  <meta charset="utf-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="RegisterController as ctrl">
+
+<div class="container" ng-init="ctrl.init()">
+  <h2>Register</h2>
+  <p>Example code angular</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="active" ng-repeat="u in ctrl.dataUsers">
+        <td>{{u.firstName}}</td>
+        <td>{{u.lastName}}</td>
+        <td>{{u.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <script src="libs/angular/angular.min.js"></script>
+  <script src="libs/angular/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controller/registerController.js"></script>
+  <script src="service/registerService.js"></script>
+</body>
+</html>
