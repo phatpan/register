@@ -24,9 +24,11 @@
                 controller: 'AddUserControllerModal',
                 backdrop: "static",
                 size: "md",
-            }).result.then(function() {
+            }).result.then(setUser);
+        }
 
-            });
+        function setUser(response) {
+            ctrl.dataUsers.unshift(response);
         }
     }
 
